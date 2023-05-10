@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linear search</title>
+    <script>
+        // let data=[2,5,55,66,14,25,45]
+        // let item=14;
+        // let index=undefined
+
+        // for(let i=0; i<=data.length-1; i++){
+        //     if(data[i]===item){
+        //         index=i
+        //     }
+        // }
+        // console.log(index)
+
+        function search(){
+        let data=[2,5,55,66,14,25,45]
+        let item=document.getElementById('position').value;
+        item=parseInt(item)
+        let index=undefined
+
+        for(let i=0; i<=data.length-1; i++){
+            if(data[i]===item){
+                index=i
+            }
+        }
+        console.log(index)
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="position" placeholder="search" />
+    <button onclick="search()">search elmenet</button>
+</body>
+</html>

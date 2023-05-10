@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>delete element in array</title>
+    <script>
+    // let data=[5,2,9,4,6,2,65]
+    // let position=3
+    // for(let i=position; i<data.length-1; i++){
+    //    data[i]=data[i+1]
+    // }
+    // data.length=data.length-1
+    // console.log(data)
+   
+    function remove(){
+        let data=[5,2,9,4,6,2,65]
+    let position=document.getElementById('position').value
+    position=parseInt(position)
+    for(let i=position; i<data.length-1; i++){
+       data[i]=data[i+1]
+    }
+    data.length=data.length-1
+    console.log(data)
+    }
+   
+    </script>
+</head>
+<body>
+    <input type="text" id="position" placeholder="enter position" />
+    <button onclick="remove()">delete elmenet</button>
+    
+</body>
+</html>

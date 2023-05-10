@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>insert element</title>
+    <script>
+        // let data=[5,2,9,4,6,2,65,5]
+        // let newEL=70;
+        // let position=2;
+
+        // for(let i=data.length-1; i>=0; i--){
+        //     if(i>=position){
+        //         data[i+1]=data[i];
+        //         if(i==position){
+        //             data[i]=newEL
+        //         }
+        //     }
+        // }
+        // console.log(data)
+
+        function insertEl() {
+            let data = [5, 2, 9, 4, 6, 2, 65, 5]
+            let newEL = document.getElementById('new position').value;
+            newEL=parseInt(newEL)
+            let position = document.getElementById('position').value;;
+
+            for (let i = data.length - 1; i >= 0; i--) {
+                if (i >= position) {
+                    data[i + 1] = data[i];
+                    if (i == position) {
+                        data[i] = newEL
+                    }
+                }
+            }
+           console.log(data)
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="text" id="position" placeholder="position" />
+    <input type="text" id="new position" placeholder="new position" />
+    <button onclick="insertEl()">new elmenet</button>
+</body>
+
+</html>
